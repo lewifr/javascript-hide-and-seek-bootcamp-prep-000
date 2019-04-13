@@ -14,3 +14,16 @@ function increaseRankBy(n) {
     r.innerHTML = parseInt(r.innerHTML) + 1
   }
 }
+
+function deepestChild() {
+  let curr = document.querySelectorAll('div#grand-node')
+  while (true) {
+    let next = curr.querySelector('div')
+    if (!next) {
+      return curr
+    }
+    else {
+      curr = next
+    }
+  }
+}
